@@ -1,0 +1,91 @@
+:root{
+    --primary-color :#fff;
+    --secondary-color: #3e3c3c;
+    --third-color:rgb(222, 219, 219);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+height: 100%;
+width: 100%;
+background-color: var(--primary-color);
+padding-inline: 10px;
+}
+
+.logo{
+  height:100%;
+}
+.logo-img{
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+}
+.navigation{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+.navbar{
+  height: 60px;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navLinks {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 400px;
+   height: 100%;
+   
+}
+a{
+  text-decoration: none;
+  color: var(--secondary-color);
+ cursor: pointer;
+ font-weight: 500;
+ font-size: 19px;
+}
+.search{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 20px;
+ padding: 30px;
+ height: 100%;
+
+}
+.bar{
+  position: relative;
+}
+.searchbar{
+  border: none;
+  padding: 10px 15px;
+  width: 270px;
+  border-radius: 20px;
+  background-color: var(--third-color);
+ 
+}
+input::placeholder{
+  padding-right: 20px;
+}
+
+.search-icon{
+  position: absolute;
+  right: 5%;
+  bottom:32%;
+  font-weight: 200;
+}
+button{
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
