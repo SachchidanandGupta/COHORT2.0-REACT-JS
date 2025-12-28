@@ -16,15 +16,20 @@ const App = () => {
     setEmail(e.target.value);
   };
   const handleSubmit = (e) => {
-    const newUserArr = [...userArr];
-    newUserArr.push({ title, phone, email });
-    setUserArr(newUserArr);
+    
+    setUserArr([...userArr, { title, phone, email }]);
     e.preventDefault();
     console.log("submitted");
     setTitle("");
     setEmail("");
     setPhone("");
   };
+   const handleDelete = (idx) => {
+    const delUser = [...userArr];
+    delUser.splice(idx,1);
+    setUserArr(delUser) 
+   }
+
   return (
     <div className=" h-screen w-full flex   bg-gray-400 p-4">
       <form
@@ -71,10 +76,11 @@ const App = () => {
       </form>
       <div className="flex gap-4 items-start">
     {userArr.map(function (elem, idx) {
-         return  <Card
+         return  <Card key={idx}
               name={userArr[idx].title}
               phone_no={userArr[idx].phone}
               email={userArr[idx].email}
+              handleDelete ={handleDelete}
             />
       })}
       </div>

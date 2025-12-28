@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
 const Card = (props) => {
-    console.log(props);
+    
     
   return (
     <div className="h-50 w-100  flex justify-center items-center gap-4 border-2 border-white rounded-2xl overflow-hidden ">
@@ -25,6 +25,7 @@ const Card = (props) => {
           <FaUser size={24} className="text-white " />
           <h2 className="text-white  text-xl">{props.email}</h2>
         </div>
+        <button className=" bg-red-500 text-white px-5 py-2 w-full rounded-xl active:scale-95 cursor-pointer" onClick={props.handleDelete}>Remove</button>
       </div>
         </div>
     </div>
